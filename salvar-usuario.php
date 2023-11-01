@@ -30,16 +30,15 @@
                 nome='{$nome}',
                 email='{$email}',
                 senha='{$senha}',
-                data_nascimento='{$data_nasc}'
-            ";
+                data_nascimento='{$data_nasc}' where cod = " . $_REQUEST['id'];
 
                 $res = $conn->query($sql);
 
                 if($res==true){
-                    print "<script>alert('Cadastrado com sucesso')</script>";
+                    print "<script>alert('Editado com sucesso')</script>";
                     print "<script>location.href= '?page=listar' </script>";
                 }else{
-                    print "<script>alert('Não foi possivel cadastrar o usuario')</script>";
+                    print "<script>alert('Não foi possivel editar o usuario')</script>";
                     print "<script>location.href= '?page=listar' </script>";
                 }
 

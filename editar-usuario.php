@@ -8,6 +8,7 @@
 ?>
 
 <form action="?page=salvar" method="POST" >
+<input type="hidden" name="acao" value="editar">
     <input type="hidden" name="id" value="<?php print $row->cod;?>">
     <div class="mb-3">
         <label>Nome</label>
